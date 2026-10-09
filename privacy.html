@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Strapd</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  </header>
+  <main>
+
+    <h1>Privacy Policy</h1>
+    <p class="muted">Effective date: October 9, 2026 · Last updated: October 9, 2026</p>
+    <div class="beta"><strong>Beta.</strong> Strapd is in a private, invite-only beta for adults in the United States. This policy describes the app as it works today and marks features that are still rolling out.</div>
+
+    <p>This policy explains how the Strapd app ("Strapd", "the app", "we", "us") handles your information. Strapd is operated by <strong>Westley Adelman</strong>, an individual in the United States. Contact: <a href="mailto:westley.j.adelman@gmail.com">westley.j.adelman@gmail.com</a>.</p>
+
+    <div class="card">
+      <h2 style="margin-top:0">The short version</h2>
+      <ul>
+        <li>Strapd shows your wearable and health data in one dashboard. That is the only thing we use it for.</li>
+        <li>Data you share from Health Connect is read on your phone and is <strong>not sent to our servers</strong>.</li>
+        <li>Brand sign-in is rolling out (Polar first, then Oura, WHOOP and Withings). If you sign in to a brand, it gives us a sign-in token. We keep it encrypted on our server and use it only to fetch your data when the app asks. We don't keep a copy of that data on our server; the only thing we keep about your data is a short “new data is ready” notice, deleted within 7 days.</li>
+        <li>We do not sell your data, show ads, or use advertising or analytics trackers.</li>
+        <li>You can disconnect any source and delete the app's data at any time.</li>
+      </ul>
+    </div>
+
+    <h2>1. Information the app uses</h2>
+
+    <h3>a. Health and fitness data from Health Connect (Android)</h3>
+    <p>With your permission, the app <strong>reads</strong> these Health Connect data types: steps, active calories burned, total calories burned, resting heart rate, heart rate variability, sleep sessions and stages, VO2 max, weight, body fat, exercise sessions, oxygen saturation (SpO2), respiratory rate, blood glucose, and blood pressure. You choose which types to allow in Health Connect's permission screen, and you can change that at any time. The app <strong>never writes</strong> data to Health Connect.</p>
+    <p>We use this data only to show your dashboard, trends, comparisons with your own baseline, and where each number came from (for example, "from Garmin Connect"). The app reads it on your phone each time you open it. It is held in the app's memory while the app runs and is <strong>not uploaded to us or anyone else</strong>. To show the source of each number, the app also sees which apps wrote the data (their package names, such as <code>com.garmin.android.apps.connectmobile</code>).</p>
+    <p><strong>Health Connect Limited Use.</strong> The use of information received from Health Connect will adhere to the Health Connect Permissions policy, including the Limited Use requirements. In particular, we use Health Connect data only to provide the features you see in the app; we do not transfer it to third parties except with your explicit consent, for security purposes, to comply with law, or as part of a merger or acquisition; and we never transfer, sell or use it for advertising, for data brokers or information resellers, to determine credit-worthiness or for lending, or with any product that may qualify as a medical device.</p>
+
+    <h3>b. Apple Health (iPhone), later</h3>
+    <p>An iPhone version is planned. When it is available, it will read Apple Health data on your phone under the same rules as Health Connect, and data from Apple Health will not be used for advertising or marketing or sold.</p>
+
+    <h3>c. Brand accounts you sign in to (rolling out)</h3>
+    <p>Brand sign-in is rolling out during the beta, one brand at a time, starting with Polar. Until a brand is available, the app shows “Coming soon” for it and nothing below applies to that brand.</p>
+    <p>You will be able to connect a <strong>Polar, Oura, WHOOP or Withings</strong> account directly, without any third-party data aggregator. Garmin is supported only through Health Connect (section a); we do not offer Garmin account sign-in.</p>
+    <ul>
+      <li><strong>Sign-in:</strong> you sign in on the brand's own page (OAuth). We never see your brand password. You choose what to share on the brand's consent screen; we ask only for <strong>read access</strong> to the data the dashboard shows (for example sleep, readiness or recovery, heart rate, HRV, activity and workouts).</li>
+      <li><strong>Tokens:</strong> the brand gives us an access token (and, for some brands, a refresh token). We store these tokens <strong>encrypted</strong> on our backend (hosted by Supabase) and use them <strong>only to fetch your own data</strong> from that brand. Tokens are never sent to your phone, shared, or used for anything else.</li>
+      <li><strong>Your data:</strong> brand data is fetched <strong>when the app asks for it</strong> (for example when you open or refresh the app) and passed straight to your phone. We do not keep a copy of your brand health data on our server. If a brand notifies us that new data is ready, we keep only that notice (which brand, which kind of data, and when), not the values, and delete it within 7 days. We also keep a small connection record (which brand, your account ID at that brand, whether it's connected, and when it was created, expires and was last used) so the app can show the connection; it's deleted when you disconnect.</li>
+      <li><strong>Disconnect:</strong> tapping <em>Disconnect</em> revokes our access at the brand where the brand supports it (for example, Polar de-registers the connection and revokes the token) and <strong>deletes the tokens</strong> from our server. Where a brand has no way for us to revoke access, we delete the tokens and you can also remove Strapd in that brand's own app or website settings.</li>
+    </ul>
+    <p>Some brands only share data with a paid membership (for example Oura Membership). Your use of each brand is also governed by that brand's own privacy policy and terms.</p>
+
+    <h3>d. An anonymous app account (only for brand sign-in)</h3>
+    <p>To use brand sign-in, the app creates an <strong>anonymous</strong> account on our backend (hosted by Supabase). It has no name, email or phone number, just a random ID, which links your brand tokens to you. The brand learns your brand account ID for the connection, as with any app you connect to it. The app keeps its own sign-in token in the phone's secure storage.</p>
+
+    <h3>e. Settings stored on your phone</h3>
+    <p>Your app settings stay on your phone: which sources are connected, your preferred source per metric, and whether sample (demo) data is shown.</p>
+
+    <h3>f. Debug reports (only if you send one)</h3>
+    <p>The app keeps a short log of connection steps on your phone to help fix problems. If you tap <em>Share debug report</em>, your phone's share sheet opens and <strong>you choose</strong> where to send it. The report contains the app version, phone model and Android version, connection statuses, permission names, the names of apps that shared data, counts, and error messages. It is designed to <strong>never include health values</strong> (no step counts, heart rates, sleep times, weights, etc.).</p>
+
+    <h3>g. Feedback and contact</h3>
+    <p>If you email us (or use a beta feedback form, if we share one), we receive what you write and your email address if you provide it.</p>
+
+    <h3>What we do not collect</h3>
+    <p>No location or GPS routes, no contacts, no photos, no advertising ID, and no analytics, advertising or crash-reporting SDKs.</p>
+
+    <h2>2. How we use information</h2>
+    <ul>
+      <li>To show your dashboard, trends, baselines and data sources.</li>
+      <li>To connect and disconnect the sources you choose.</li>
+      <li>To fix problems you report and improve the features you see in the app.</li>
+      <li>To communicate with you about the beta if you contacted us or signed up.</li>
+    </ul>
+    <p>We do not use health data for advertising or marketing, we do not sell it, and we do not use it to make decisions about credit, insurance, or employment.</p>
+
+    <h2>3. Who we share information with</h2>
+    <table>
+      <tr><th>Recipient</th><th>What and why</th></tr>
+      <tr><td>Supabase</td><td>Hosts our backend, your anonymous account and your encrypted brand tokens; processes requests between the app and the brands you connect. Standard server logs may record request times and errors. Only if you use brand sign-in.</td></tr>
+      <tr><td>The brands you connect</td><td>You sign in with them directly. They learn that you connected Strapd, and we send them your token to fetch your data, and a revoke request when you disconnect.</td></tr>
+      <tr><td>Google (Gmail, and Forms if we use a feedback form)</td><td>Only if you email us or use a feedback form.</td></tr>
+      <tr><td>Legal and safety</td><td>If required by law, or to protect users' safety or investigate abuse.</td></tr>
+      <tr><td>A successor</td><td>If the app is transferred as part of a merger or acquisition, subject to this policy.</td></tr>
+    </table>
+    <p>We share Health Connect data with no one. We do not sell personal information, and we do not "share" it for cross-context behavioral advertising.</p>
+
+    <h2>4. Retention and deletion</h2>
+    <ul>
+      <li><strong>Health Connect data</strong> is not stored by us. It stays in Health Connect, which you control in Android settings.</li>
+      <li><strong>On your phone:</strong> settings and the debug log stay until you tap <em>Me → Delete all my data</em> or uninstall the app. The debug log keeps only the most recent 300 entries.</li>
+      <li><strong>Brand connections (rolling out):</strong> your encrypted tokens are kept while the brand is connected. <em>Disconnect</em> revokes access at the brand where supported and deletes the tokens from our server right away. New-data notices are deleted within 7 days. We hold no copy of brand health data to delete. Data the brand itself stores stays under that brand's own policy.</li>
+      <li><strong>Full deletion of server-side data</strong> (your anonymous account and any brand tokens): email us from the app's contact address and we will delete it within 30 days.</li>
+      <li>Beta feedback and emails are kept until the beta ends, then deleted within 90 days, unless you ask us to delete them sooner.</li>
+    </ul>
+    <p>To stop all access, you can also revoke Strapd's permissions in Health Connect (Android Settings → Health Connect → App permissions) and uninstall the app.</p>
+
+    <h2>5. Security</h2>
+    <p>All connections between the app, our backend and the brands use HTTPS. Brand tokens are encrypted at rest on our server, and our brand client secrets are held only on the server, never in the app. The app's sign-in token is kept in the phone's encrypted secure storage. Access to our backend is limited to the operator. No method is 100% secure; if a breach affects your data, we will notify you as required by law, including the FTC Health Breach Notification Rule.</p>
+
+    <h2>6. Your choices and rights</h2>
+    <ul>
+      <li>Allow or deny each Health Connect data type, and change it anytime.</li>
+      <li>Connect or disconnect any brand account.</li>
+      <li>Ask us for a copy of, or deletion of, data we hold about you, by email.</li>
+      <li>Depending on where you live (for example Washington, Nevada, California, Connecticut), you may have additional rights over consumer health data, including access, deletion and withdrawal of consent. We will honor these requests within the time the law requires (for example 45 days).</li>
+    </ul>
+
+    <h2>7. Children</h2>
+    <p>Strapd is for adults. You must be <strong>18 or older</strong> to use the beta. We do not knowingly collect data from anyone under 18. If you believe a minor has used the app, contact us and we will delete the data.</p>
+
+    <h2>8. Where data is processed</h2>
+    <p>The beta is offered in the United States. Data handled by our backend (Supabase) is processed in the United States. Brands process your data under their own policies, possibly outside the US. (Our Supabase project is in the US East region.)</p>
+
+    <h2>9. Not medical advice</h2>
+    <p>Strapd is a wellness app, not a medical device. It does not diagnose, treat, cure or prevent any disease. Talk to a healthcare professional about your health.</p>
+
+    <h2>10. Changes</h2>
+    <p>We will post changes here and update the date above. If a change materially affects how we use health data, we will tell you in the app and, where required, ask for your consent first.</p>
+
+    <h2>11. Contact</h2>
+    <p>Westley Adelman (individual operator), United States<br>
+    Email: <a href="mailto:westley.j.adelman@gmail.com">westley.j.adelman@gmail.com</a></p>
+  </main>
+  <footer>
+    <p><a href="./">Home</a> · <a href="terms.html">Terms of Service</a></p>
+    
+  </footer>
+</body>
+</html>
